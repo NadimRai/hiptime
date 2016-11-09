@@ -1,9 +1,13 @@
 <div class="col-md-10 col-md-offset-1">
 	<div class="index-wrapper">
+	<% if user_signed_in? %>
 		<% @items.each do |item| %> 
 			<%= item.title %><br>
 			<%= item.description %><br>
 		<% end %>
+	<% else %>
+		<%= render 'welcome_page' %>
+	<% end %>
 	</div>
 </div>
 
