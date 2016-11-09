@@ -2,7 +2,9 @@
 	<div class="index-wrapper">
 		<% @items.each do |item| %> 
 			<%= item.title %><br>
-			<%= item.description %>
+			<%= item.description %><br>
 		<% end %>
 	</div>
 </div>
+
+<%= link_to "New", new_item_path %>
